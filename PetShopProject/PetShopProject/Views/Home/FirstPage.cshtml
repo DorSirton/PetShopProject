@@ -1,0 +1,30 @@
+﻿
+
+
+<!DOCTYPE html>
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/FirstPageStyle.css" />
+    <title>index2</title>
+</head>
+<body>
+    <video src="~/Videos/particles.mp4" muted="" autoplay=""></video>
+    <h2><span>W</span>elcome <span>T</span>o  <span>D</span>or <span>S</span>irton <span>P</span>et-<span>S</span>ite </h2>
+    <a asp-action="index"></a>
+    <script>
+            var video = document.querySelector('video');
+            var headline = document.querySelector('h2');
+            var btn = document.querySelector('a');
+            video.addEventListener('ended', function () {
+            video.style.display = 'none';
+            headline.style.display = 'none';
+            btn.classList.add('movingToHomePage');
+            btn.innerText = 'Go To Home Page';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿.tableValueContent td{
+    color: black;
+    font-weight: bold;
+    font-size:20px;
+}
+.tableHeadLineContent th {
+    color: #f9004d;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.adminActOptions ul li {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    list-style-type : none;
+}
+.btn {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+}
+
+    .btn:hover {
+        transform: scale(1.2);
+        background-color: white;
+        border: 2px solid #f9004d;
+        cursor: pointer;
+    }
+.btn-cc {
+    margin-top: 20px;
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+    box-shadow: 0px 0px 5px white, 0px 0px 15px #f9004d;
+}
+
+    .btn-cc:hover {
+        background-color: white;
+        border: 2px solid #f9004d;
+        box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    }
+
+h1{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-size: 4em;
+    font-weight: 900;
+    color: #f9004d
+}
+
+.adminheadlinepage{
+    text-align:left;
+}

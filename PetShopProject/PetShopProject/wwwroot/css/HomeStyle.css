@@ -1,0 +1,82 @@
+﻿
+#card {
+    height: 400px;
+    width: 400px;
+    padding: 25px 30px;
+    background: black;
+    border-radius: 20px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+    #card h5 {
+        color: crimson;
+        font-size: 25px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+.mostCommentedAnimals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+#card span {
+    font-size: 17px;
+    font-weight: bold;
+    color: crimson
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .headline ul {
+        
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+        .headline ul li {
+            list-style-type: none;
+        }
+
+    .headline span {
+        color: #ff022c;
+        font-size: 40px;
+    }
+
+    .headline h1 {
+        position: relative;
+        font-size: 4em;
+        font-weight: 900;
+        color: dodgerblue;
+        z-index: 1;
+        overflow: hidden;
+        margin-top:85px;
+    }
+    .headline h3 {
+        font-size: 2em;
+        font-weight: 900;
+        color: dodgerblue;
+        z-index: 1;
+        overflow: hidden;
+    }
+        
+ a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+ a:hover {
+        color: #f9004d;
+        transition: .4s;
+    }

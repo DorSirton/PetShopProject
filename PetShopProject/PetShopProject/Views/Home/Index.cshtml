@@ -1,0 +1,30 @@
+﻿@model IEnumerable<PetShop.Data.Models.Animal>
+<link rel="stylesheet" href="~/css/HomeStyle.css" />
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="headline">
+    <ul>
+        <li><h1> <span>Welcome To</span>  Dor Sirton <span>Pet-Site</span> </h1></li>
+        <li><h3> Look At The <span>Top 2</span> Commented Animal </h3></li>
+    </ul>
+</div>
+
+<div class="mostCommentedAnimals">
+
+    @foreach (var item in Model)
+    {
+        <div id="card">
+
+            <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+            <div>   <span>@Html.DisplayNameFor(model => model.Description)</span> : @Html.DisplayFor(modelItem => item.Description)</div>
+            <div>   <span>@Html.DisplayNameFor(model => model.BirtheDate)</span> : @Html.DisplayFor(modelItem => item.BirtheDate)</div>
+            <div class="parentImage"> <img class="myImage" src="@Url.Content(@item.PhotoUrl)" /></div>
+            <div> <span>@Html.DisplayNameFor(model => model.Category)</span>  : @Html.DisplayFor(modelItem => item.Category!.Name)</div>
+        </div>
+    }
+
+</div>

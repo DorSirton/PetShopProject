@@ -1,0 +1,81 @@
+﻿@model PetShop.Data.Models.Animal
+<link href="~/css/DetailsStyle.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="headerAdminoption">
+    <h1>Details</h1>
+    <h4>Animal</h4>
+</div>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BirtheDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BirtheDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PhotoUrl)
+        </dt>
+        <dd class="col-sm-10">
+            <a><img src="@Html.DisplayFor(model => model.PhotoUrl)"></a>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <form id="addcomment" asp-controller="User" asp-action="AddComment" asp-route-id="@Model?.AnimalId">
+        <input type="hidden" asp-for="AnimalId" />
+        <textarea class="form-control" rows="4" name="myComment"> </textarea>
+        <input type="submit" id="btnClick" value="Add Comment" />
+    </form>
+</div>
+<div class="comments-part-section">
+    <table class="table">
+        <thead>
+            <tr>
+                <th style="font-weight:bold;">
+                    Comments
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @ViewBag.AnimalComments)
+            {
+                <tr>
+                    <td class="comment-Content">
+                        @item.CommentContent
+                    </td>
+                    <td><a asp-action="DeleteComment" asp-route-itemId="@item.CommentId">Delete This Comment</a></td>
+                </tr>
+            }
+           
+        </tbody>
+    </table>
+    <div class="Back-to-List-Admin">
+        <a class="a-style-back" asp-action="Index">Back to List</a>
+    </div>
+</div>
+

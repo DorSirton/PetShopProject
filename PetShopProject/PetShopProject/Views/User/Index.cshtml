@@ -1,0 +1,56 @@
+﻿@model IEnumerable<PetShop.Data.Models.Animal>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/jquery.flipster.min.css" />
+    <link rel="stylesheet" href="/css/AnimalCatalogstyle.css" />
+    <title>User Loggin</title>
+</head>
+
+<body>
+
+    <div class="hero">
+
+        <div class="carousel">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <div class="card">
+                            <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+                            <div><span>@Html.DisplayNameFor(model => model.Description)</span> : @Html.DisplayFor(modelItem => item.Description)</div>
+                            <div> <span>@Html.DisplayNameFor(model => model.BirtheDate)</span> : @Html.DisplayFor(modelItem => item.BirtheDate)</div>
+                            <div class="parentImage"> <img class="myImage" src="@Url.Content(@item.PhotoUrl)" /></div>
+                            <div> <span>@Html.DisplayNameFor(model => model.Category)</span>  : @Html.DisplayFor(modelItem => item.Category!.Name)</div>
+                            <a  asp-action="Details" asp-route-id="@item.AnimalId">See Details and Add Comment</a> 
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/jquery.flipster.min.js"></script>
+    <script> $('.carousel').flipster({
+        style:'carousel',
+        spacing: -0.3,
+    });</script>
+
+</body>
+</html>
+
+
+
+
+

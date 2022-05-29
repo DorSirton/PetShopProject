@@ -1,0 +1,58 @@
+﻿dd, .comment-Content {
+    color: #f9004d;
+    font-weight: bold;
+    font-family: Tahoma;
+    font-size: 20px;
+}
+.User-headline-details{
+    margin-top:85px;
+}
+
+.comments-part-section{
+    margin-top:40px;
+}
+.a-style-back {
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.7);
+    border-radius: 6px;
+}
+ #h1-user {
+    position: relative;
+    font-size: 4em;
+    font-weight: 900;
+    color: dodgerblue;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: 85px;
+}
+
+ #h4-user {
+    font-size: 2em;
+    font-weight: 900;
+    color: dodgerblue;
+    z-index: 1;
+    overflow: hidden;
+}
+.Back-to-List-Admin{
+    margin-top:30px;
+}
+#btnClick {
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.7);
+    border-radius: 6px;
+}
+    #btnClick:hover {
+        color: #f9004d;
+    }
+
+ 
